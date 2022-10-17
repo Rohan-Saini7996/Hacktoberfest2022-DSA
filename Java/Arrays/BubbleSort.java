@@ -5,30 +5,31 @@
  */
 
  
-public class BubbleSort {
+public class Main
+{
+  public static void main(String[] args) {  
+    int[] a = {14,33,27,35,10};  
+    for(int i=0;i<4;i++)  
+    {  
+        for (int j=0;j<4;j++)  
+        {  
+            if(a[j]>a[j+1])  
+            {  
+                int temp = a[j];  
+                a[j]=a[j+1];  
+                a[j+1] = temp;   
+            }  
+        }  
+    } 
+	  
+System.out.println("Printing Sorted List ...");  
+    for(int i=0;i<5;i++)  
+    {  
+        System.out.print(a[i]+" ");  
+    }  
+}  
+}  
 
-    public static void sortArray(int array[]) {
-        for(int i=0; i<array.length-1; i++){
-            for(int j=0; j<array.length-i-1; j++){
-                if (array[j]>array[j+1]) {
-                    int tmp=array[j];
-                    array[j]=array[j+1];
-                    array[j+1]=tmp;
-                }
-            }
-        } 
-    }
-
-    public static void main(String args[]) {
-        int array[]={8,7,6,5,4,3,2,1,0};
-        sortArray(array);
-        
-        for(int i=0; i<array.length; i++){
-            System.out.print(array[i] + " ");
-        }
-    }
-    
-}
 
 /*
  *    Output:
